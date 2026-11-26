@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Before You Trust</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h2>Verify Before You Trust</h2>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="learn.html">Learn</a>
+        <a href="verify.html">Verify</a>
+        <a href="game.html">Detective Game</a>
+        <a href="safety.html">Safety Tips</a>
+        <a href="report.html">Report</a>
+        <a href="about.html">About</a>
+    </nav>
+</header>
+
+<section>
+    <h1>Verify Before You Trust</h1>
+    <p>Complete this checklist before trusting or sharing suspicious content.</p>
+
+    <div class="card">
+        <label><input type="checkbox" class="verify"> Check the original source.</label>
+    </div>
+
+    <div class="card">
+        <label><input type="checkbox" class="verify"> Check the date and context.</label>
+    </div>
+
+    <div class="card">
+        <label><input type="checkbox" class="verify"> Compare with trusted sources.</label>
+    </div>
+
+    <div class="card">
+        <label><input type="checkbox" class="verify"> Verify unusual requests directly.</label>
+    </div>
+
+    <div class="card">
+        <label><input type="checkbox" class="verify"> Think before sharing.</label>
+    </div>
+
+    <h3 id="progress-text">0 out of 5 completed</h3>
+    <div class="progress-bar">
+        <div id="progress-fill"></div>
+    </div>
+</section>
+
+<script>
+const boxes = document.querySelectorAll(".verify");
+
+boxes.forEach(function(box) {
+    box.addEventListener("change", function() {
+        const completed = document.querySelectorAll(".verify:checked").length;
+        document.getElementById("progress-text").innerText =
+            completed + " out of 5 completed";
+        document.getElementById("progress-fill").style.width =
+            (completed / 5 * 100) + "%";
+    });
+});
+</script>
+
+</body>
+</html>

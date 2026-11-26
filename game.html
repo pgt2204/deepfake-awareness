@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepfake Detective Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h2>Verify Before You Trust</h2>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="learn.html">Learn</a>
+        <a href="verify.html">Verify</a>
+        <a href="game.html">Detective Game</a>
+        <a href="safety.html">Safety Tips</a>
+        <a href="report.html">Report</a>
+        <a href="about.html">About</a>
+    </nav>
+</header>
+
+<!-- Deepfake Detective Game -->
+<section id="game">
+    <div class="game-heading">
+        <p class="game-tag">⚡ DIGITAL INVESTIGATION UNIT</p>
+        <h1>Deepfake Detective</h1>
+        <p class="intro">
+            Investigate suspicious digital content,
+            make smart decisions and earn detective points!
+        </p>
+    </div>
+
+    <div class="game-dashboard">
+        <div class="game-stat">
+            <span>🏆</span>
+            <h3 id="score">0</h3>
+            <p>Points</p>
+        </div>
+        <div class="game-stat">
+            <span>🔍</span>
+            <h3 id="mission-number">1/3</h3>
+            <p>Mission</p>
+        </div>
+    </div>
+
+    <div class="mission-card">
+        <p class="mission-label">CURRENT CASE</p>
+        <h2 id="case-title">The Suspicious Photo</h2>
+        <p id="case-description">
+            You receive a photograph online claiming to show
+            a famous person making an announcement.
+            The source is unknown.
+            What should you do first?
+        </p>
+
+        <div id="game-options" class="game-options"></div>
+        <p id="game-feedback" aria-live="polite"></p>
+
+        <button id="next-mission" onclick="nextMission()" hidden>
+            Next Mission →
+        </button>
+    </div>
+</section>
+
+<script src="game.js"></script>
+</body>
+</html>
